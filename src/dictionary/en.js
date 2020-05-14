@@ -12,7 +12,7 @@ export const en = {
     a2: 'Creating brand-new internal CMS based on Yii-framework.',
     a3: 'Was implemented SAP\'s internal system for events management, reporting, viewing statistics of the events, etc.',
     a4: 'Creating a JS-library for uploading video directly to YouTube.',
-    a5: 'Western Union Stimul - internal corporate website especially for partners, staff, who is working with Western Union money transfer in Russia.',
+    a5: 'Western Union - internal corporate website especially for partners, staff, who is working with Western Union money transfer in Russia.',
     a6: 'Technical leader of the website (TaxCom) for the russia\'s accountants.',
     a7: 'Was built an BSP-utility for extreme fast exporting/importing from/to MSSQL DB.',
     a8: 'Creating the <a href="https://github.com/Zlobin/photo-module" rel="nofollow" target="_blank">JS-module</a> for working with photos: cropping, changing colors, saving results.',
