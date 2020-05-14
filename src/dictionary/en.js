@@ -3,6 +3,7 @@ export const en = {
     skype: 'Skype',
     email: 'Email',
     phone: 'Phone',
+    github: 'Github',
   },
   cmg: {
     title: 'Middle web-developer',
