@@ -1,0 +1,126 @@
+.cv {
+  background: $color-white;
+  border-left: 1px solid $color-cv-border;
+  font-size: 14px;
+  line-height: 21px;
+  max-height: 100%;
+  overflow: auto;
+  padding: set-rhythm(8) set-rhythm(7);
+  position: relative;
+  transition: margin .2s;
+  width: 100%;
+  z-index: 1;
+
+  &.left {
+    margin-left: set-rhythm(16);
+  }
+
+  .wrapper {
+    max-width: set-rhythm(112);
+    position: relative;
+
+    h1 {
+      font-size: 24px;
+      line-height: 1.2;
+      margin-top: 0;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        color: $color-list-font;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    .tags {
+      @import 'tags';
+
+      margin-left: $base-rhythm / 2 * -1;
+      max-width: set-rhythm(100);
+    }
+
+    section {
+      margin-bottom: set-rhythm(2);
+
+      &.experience {
+        @import 'career';
+
+        .project-info {
+          border: 1px solid $color-cv-project-info-border;
+          font-size: 12px;
+          margin-bottom: set-rhythm(2);
+          margin-top: ($base-rhythm / 2);
+          max-width: set-rhythm(63);
+          padding: set-rhythm();
+
+          h3 {
+            font-size: 14px;
+            line-height: 1.2;
+            margin: 0;
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+
+        .about-project {
+          font-size: 10px;
+          position: relative;
+          top: -($base-rhythm / 4);
+        }
+      }
+
+      &.lang {
+        position: absolute;
+        top: set-rhythm(-2);
+        right: 0;
+        
+        > span {
+          cursor: pointer;
+          font-size: 20px;
+          color: #ccc;
+        }
+      }
+
+      &.personal {
+        h1 {
+          display: inline-block;
+          position: relative;
+
+          .age {
+            color: $color-cv-age;
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: set-rhythm(4);
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+
+      &.education {
+        .block {
+          h5 {
+            font-weight: normal;
+            margin-top: set-rhythm();
+          }
+        }
+      }
+
+      h5,
+      ul {
+        margin: ($base-rhythm / 4) 0;
+      }
+
+      > h5 {
+        color: $color-cv-h5-font;
+        font-size: 18px;
+        margin: set-rhythm() 0;
+      }
+    }
+  }
+}

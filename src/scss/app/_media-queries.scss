@@ -1,0 +1,66 @@
+@media screen and (max-width: 1000px) {
+  .cv {
+    .wrapper {
+      h1 {
+        font-size: 18px;
+        margin-top: set-rhythm();
+      }
+
+      section {
+        &.experience {
+          .work {
+            padding-left: 0;
+
+            .company-box {
+              display: flex;
+              flex-direction: column-reverse;
+
+              .holder {
+                display: block;
+
+                .counter {
+                  display: none;
+                }
+              }
+
+              aside {
+                border-bottom: ($base-rhythm / 4) solid $color-career-border-background;
+                border-left: 0;
+                display: block;
+                width: 100%;
+
+                .table {
+                  display: none;
+                }
+
+                .time {
+                  margin-top: -($base-rhythm / 2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cv {
+    padding: set-rhythm(3) set-rhythm(4);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cv {
+    border-left: 0;
+    padding: set-rhythm(2) set-rhythm(3);
+    padding-left: set-rhythm(6);
+
+    .wrapper {
+      h1 {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+const CompressionPlugin = require('compression-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
+const {join} = require('path');
+const {port} = require('./package.json');
+
+const rootPath = process.cwd();
+
+module.exports = {
+  target: 'web',
+
+  entry: {
+    app: join(rootPath, 'src/index.js'),
+    css: join(rootPath, 'src/scss/main.scss'),
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.scss$/i,
+        use: [
+          {
+            loader: require.resolve('cache-loader'),
+          },
+          {
+            loader: require.resolve('style-loader'),
+          },
+          {
+            loader: require.resolve('css-loader'),
+          },
+          {
+            loader: require.resolve('sass-loader'),
+          },
+        ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /\/node_modules/,
+        use: [
+          {
+            loader: require.resolve('cache-loader'),
+          },
+          {
+            loader: require.resolve('babel-loader'),
+            options: {
+              babelrc: false,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.html$/,
+        loader: require.resolve('html-loader'),
+      },
+    ],
+  },
+
+  mode: 'production',
+  devtool: false,
+  watch: false,
+
+  devServer: {
+    compress: false,
+    open: true,
+    hot: true,
+    port,
+  },
+
+  output: {
+    path: join(rootPath, 'dist'),
+    filename: '[name].[hash:5].js',
+    publicPath: '/',
+    pathinfo: false,
+  },
+
+  optimization: {
+    minimize: true,
+
+    minimizer: [
+      new TerserPlugin({
+        exclude: /\/node_modules/,
+        sourceMap: false,
+        parallel: true,
+      }),
+    ],
+  },
+
+  performance: {
+    hints: false,
+  },
+
+  plugins: [
+    new CleanWebpackPlugin(),
+
+    new HtmlWebpackPlugin({
+      meta: {
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+      },
+      minify: {
+        removeComments: false,
+      },
+      template: join(rootPath, 'public/index.html'),
+    }),
+
+    new CompressionPlugin({
+      test: /\.js$|\.css$|\.html$/,
+      filename: '[path].gz[query]',
+      algorithm: 'gzip',
+      threshold: 1024,
+      minRatio: 1,
+    }),
+
+    new CompressionPlugin({
+      test: /\.(js|css|html|svg)$/,
+      filename: '[path].br[query]',
+      algorithm: 'brotliCompress',
+      deleteOriginalAssets: false,
+      threshold: 1024,
+      minRatio: 1,
+      compressionOptions: {
+        level: 11,
+      },
+    }),
+  ],
+};
