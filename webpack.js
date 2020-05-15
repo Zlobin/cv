@@ -102,6 +102,13 @@ module.exports = {
       },
     ]),
 
+    new CopyPlugin([
+      {
+        from: join(rootPath, 'public/budget.json'),
+        to: join(rootPath, 'dist/budget.json'),
+      },
+    ]),
+
     new HtmlWebpackPlugin({
       meta: {
         viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
