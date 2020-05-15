@@ -2,6 +2,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const {join} = require('path');
 const {port} = require('./package.json');
@@ -93,6 +94,13 @@ module.exports = {
 
   plugins: [
     new CleanWebpackPlugin(),
+
+    new CopyPlugin([
+      {
+        from: join(rootPath, 'public/fonts/'),
+        to: join(rootPath, 'dist/fonts'),
+      },
+    ]),
 
     new HtmlWebpackPlugin({
       meta: {
