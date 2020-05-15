@@ -86,6 +86,12 @@
         }
       }
 
+      &.contacts {
+        > div {
+          padding: set-rhythm(.5) 0;
+        }
+      }
+
       &.personal {
         h1 {
           display: inline-block;
