@@ -33,7 +33,7 @@ export const en = {
     a5: 'Scrum master of the Team.',
     a6: 'Team lead substitution for the time of his absence.',
     now: 'till now',
-    place: 'NewYork, USA',
+    place: 'Moscow, Russia',
     years: 'years <br>at this job',
     stack: 'Technologies used',
   },
