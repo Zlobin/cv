@@ -115,7 +115,7 @@ export const en = {
     years: 'years old',
   },
   stack: {
-    title: 'Stack',
+    title: 'Active main stack',
   },
   citizenship: {
     title: 'Citizenship',

@@ -1,0 +1,22 @@
+{
+  "short_name": "Zlobin_CV",
+  "name": "Eugene Zlobin CV",
+  "description": "Zlobin Eugene, FullStack JavaScript and NodeJS, FrontOps engineer",
+  "icons": [
+    {
+      "src": "/i/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/i/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?pwa",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#fff"
+}

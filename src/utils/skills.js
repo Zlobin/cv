@@ -10,6 +10,9 @@ export const skills = {
   frameworks_lib: [
     'React',
     'Redux',
+    'WebWorkers',
+    'WebSockets',
+    'PWA',
     'Backbone',
     'ReactNative',
     'Angular',
@@ -24,7 +27,7 @@ export const skills = {
     'Redis',
     'PostgreSQL',
   ],
-  other: [
+  ops: [
     'Kubernetes',
     'Docker',
     'Agile',

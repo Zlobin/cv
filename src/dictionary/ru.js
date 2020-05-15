@@ -111,11 +111,11 @@ export const ru = {
   },
   about: {
     fullName: 'Злобин Евгений',
-    title: 'FullStack JavaScript and NodeJS, FrontOps инженер',
+    title: 'FullStack JavaScript и NodeJS, FrontOps инженер',
     years: 'года',
   },
   stack: {
-    title: 'Навыки',
+    title: 'Языки и технологии',
   },
   citizenship: {
     title: 'Гражданство',

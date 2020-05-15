@@ -13,8 +13,8 @@ module.exports = {
   target: 'web',
 
   entry: {
-    app: join(rootPath, 'src/index.js'),
     css: join(rootPath, 'src/scss/main.scss'),
+    app: join(rootPath, 'src/index.js'),
   },
 
   module: {
@@ -97,15 +97,8 @@ module.exports = {
 
     new CopyPlugin([
       {
-        from: join(rootPath, 'public/fonts/'),
-        to: join(rootPath, 'dist/fonts'),
-      },
-    ]),
-
-    new CopyPlugin([
-      {
-        from: join(rootPath, 'public/budget.json'),
-        to: join(rootPath, 'dist/budget.json'),
+        from: join(rootPath, 'public/tocopy/'),
+        to: join(rootPath, 'dist/'),
       },
     ]),
 
