@@ -40,6 +40,6 @@ export const skills = {
     'AWS',
     'SwaggerApi',
     'nginx',
-    'Puppeteer'
+    'Puppeteer',
   ]
 };
