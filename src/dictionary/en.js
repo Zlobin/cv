@@ -32,6 +32,7 @@ export const en = {
     a4: 'Optimization of the application building process based on webpack + nodejs, which led to an increase build time in two orders.',
     a5: 'Scrum master of the Team.',
     a6: 'Team lead substitution for the time of his absence.',
+    a7: 'Creating of the unit-tests.',
     now: 'till now',
     place: 'Moscow, Russia',
     years: 'years <br>at this job',

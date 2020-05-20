@@ -10,6 +10,7 @@ export const skills = {
   frameworks_lib: [
     'React',
     'Redux',
+    'RxJS',
     'WebWorkers',
     'WebSockets',
     'PWA',
@@ -19,8 +20,10 @@ export const skills = {
     'jQuery',
     'Sass',
     'Jest',
+    'Enzyme',
     'Webpack',
     'Babel',
+    'SASS',
   ],
   db: [
     'MongoDB',
@@ -37,5 +40,6 @@ export const skills = {
     'AWS',
     'SwaggerApi',
     'nginx',
+    'Puppeteer'
   ]
 };
