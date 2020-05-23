@@ -24,6 +24,7 @@ export const skills = {
     'Webpack',
     'Babel',
     'SASS',
+    'MaterialUI',
   ],
   db: [
     'MongoDB',
