@@ -24,7 +24,7 @@ export const en = {
   },
   vtb: {
     title: 'Senior web-developer',
-    description: 'Working in the biggest Russian Bank (RB) with legal entities.',
+    description: 'Working in the biggest Russian Bank, Remote Banking with legal entities.',
     achievements: 'Responsibilities and achievements',
     a1: 'Develop an application\'s segmentation model based on customer differences in SLA.',
     a2: 'Development and creation of new components within the internal UIKit.',
@@ -112,7 +112,7 @@ export const en = {
   },
   about: {
     fullName: 'Zlobin Eugene',
-    title: 'FullStack JavaScript and NodeJS, FrontOps engineer',
+    title: 'Fullstack JavaScript, TypeScript, React, Redux, Node.js, Go developer. <br> FrontOps. <br> Solution architect.',
     years: 'years old',
   },
   stack: {

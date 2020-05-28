@@ -131,10 +131,8 @@ dfn {
   font-style: italic;
 }
 
-
 h1 {
   @include normalize-font-size($h1-font-size);
-  @include normalize-margin(1 0, $h1-font-size);
 }
 
 h2 {

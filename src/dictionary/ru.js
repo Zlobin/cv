@@ -76,13 +76,13 @@ export const ru = {
     stack: 'Используемые технологии',
   },
   otg: {
-    title: 'New York, USA',
+    title: 'Нью-Йорк, США',
     job: 'Создание нового шаблона для wordpress, конфигурирование web-сервера, создание WP-plugin для синхронизации темы из гитхаба.',
     time: 'Время разработки',
     stack: 'Используемые технологии',
   },
   sibedge: {
-    title: 'Tomsk, Russia',
+    title: 'Томск, Россия',
     job: 'Создание платформы для трейдинга.',
     time: 'Время разработки',
     stack: 'Используемые технологии',
@@ -112,7 +112,7 @@ export const ru = {
   },
   about: {
     fullName: 'Злобин Евгений',
-    title: 'FullStack JavaScript и NodeJS, FrontOps инженер',
+    title: 'Fullstack JavaScript, TypeScript, React, Redux, Node.js, Go developer. <br> FrontOps. <br> Solution architect.',
     years: 'года',
   },
   stack: {

@@ -5,7 +5,7 @@
   line-height: 21px;
   max-height: 100%;
   overflow: auto;
-  padding: set-rhythm(8) set-rhythm(7);
+  padding: set-rhythm(5) set-rhythm(7);
   position: relative;
   transition: margin .2s;
   width: 100%;
@@ -22,7 +22,6 @@
     h1 {
       font-size: 24px; 
       line-height: 1.2;
-      margin-top: 0;
     }
 
     ul {
@@ -49,11 +48,11 @@
         @import 'career';
 
         .project-info {
+          background-color: $color-career-aside-background;
           border: 1px solid $color-cv-project-info-border;
           font-size: 12px;
           margin-bottom: set-rhythm(2);
           margin-top: ($base-rhythm / 2);
-          max-width: set-rhythm(63);
           padding: set-rhythm();
 
           h3 {
@@ -76,8 +75,8 @@
 
       &.lang {
         position: absolute;
-        top: set-rhythm(-2);
-        right: 0;
+        top: set-rhythm(-3);
+        left: set-rhythm(7);
         
         > span {
           cursor: pointer;
@@ -93,17 +92,33 @@
       }
 
       &.personal {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        img {
+          margin: 0 set-rhythm();
+          border-radius: 100px;
+          border: set-rhythm(.5) solid $color-career-border-background;
+          box-shadow: 0 0 set-rhythm() $color-career-border-background;
+        }
+
         h1 {
           display: inline-block;
           position: relative;
+
+          .position {
+            color: $color-cv-age;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.4;
+            margin-top: set-rhythm(.5);
+          }
 
           .age {
             color: $color-cv-age;
             font-size: 14px;
             font-weight: normal;
-            margin-top: set-rhythm(4);
-            position: absolute;
-            right: 0;
           }
         }
       }
