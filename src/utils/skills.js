@@ -7,6 +7,7 @@ export const skills = {
     'GO',
     'HTML5',
     'CSS',
+    'SQL',
   ],
   frameworks_lib: [
     'React',
@@ -14,8 +15,6 @@ export const skills = {
     'WebWorkers',
     'WebSockets',
     'PWA',
-    'Angular',
-    'jQuery',
     'Sass',
     'Jest',
     'Enzyme',
@@ -26,6 +25,7 @@ export const skills = {
     'MongoDB',
     'Redis',
     'PostgreSQL',
+    'GraphQL',
   ],
   ops: [
     'Kubernetes',
@@ -37,5 +37,6 @@ export const skills = {
     'AWS',
     'Nginx',
     'Puppeteer',
+    'Apollo',
   ]
 };

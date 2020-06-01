@@ -95,12 +95,14 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
 
-    new CopyPlugin([
-      {
-        from: join(rootPath, 'public/tocopy/'),
-        to: join(rootPath, 'dist/'),
-      },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: join(rootPath, 'public/tocopy/'),
+          to: join(rootPath, 'dist/'),
+        },
+      ],
+    }),
 
     new HtmlWebpackPlugin({
       meta: {
