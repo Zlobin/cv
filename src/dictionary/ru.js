@@ -112,7 +112,7 @@ export const ru = {
   },
   about: {
     fullName: 'Злобин Евгений',
-    title: 'Fullstack JavaScript, TypeScript, React, Redux, Node.js, Go developer. <br> FrontOps. <br> Solution architect.',
+    title: 'Fullstack Java, JavaScript, TypeScript, React, Redux, Node.js developer. <br> FrontOps. <br> Solution architect.',
     years: 'года',
   },
   stack: {
