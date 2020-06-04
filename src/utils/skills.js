@@ -1,10 +1,9 @@
 export const skills = {
   lang: [
+    'Java',
     'JavaScript',
     'TypeScript',
     'Node.js',
-    'ReactNative',
-    'GO',
     'HTML5',
     'CSS',
     'SQL',
@@ -12,6 +11,8 @@ export const skills = {
   frameworks_lib: [
     'React',
     'Redux',
+    'Spring',
+    'Hibernate',
     'WebWorkers',
     'WebSockets',
     'PWA',
@@ -32,6 +33,8 @@ export const skills = {
     'Docker',
     'Agile',
     'Linux',
+    'Maven',
+    'Kafka',
     'Git',
     'SPA',
     'AWS',
