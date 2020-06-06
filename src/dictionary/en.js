@@ -75,6 +75,12 @@ export const en = {
     time: 'Period of development',
     stack: 'Technology used',
   },
+  gbo: {
+    title: 'Pavlodar, Kazakhstan',
+    job: 'Finalization and maintaining website for advertisement.',
+    time: 'Period of development',
+    stack: 'Technology used',
+  },
   otg: {
     title: 'New York, USA',
     job: 'Creating new template for WordPress, configuring web-servers, creating WP-plugin for synchronizing theme from github.',

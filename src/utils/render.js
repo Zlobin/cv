@@ -6,6 +6,7 @@ import nitka from '../templates/nitka.html';
 import cmg from '../templates/cmg.html';
 import finist from '../templates/finist.html';
 import lrw from '../templates/lrw.html';
+import gbo from '../templates/gbo.html';
 import otg from '../templates/otg.html';
 import lang from '../templates/lang.html';
 import vtb from '../templates/vtb.html';
@@ -35,6 +36,7 @@ const html = {
   vtb,
   otg,
   lrw,
+  gbo,
 };
 
 const i18n = new Locale();
