@@ -10,6 +10,7 @@ import gbo from '../templates/gbo.html';
 import otg from '../templates/otg.html';
 import lang from '../templates/lang.html';
 import vtb from '../templates/vtb.html';
+import initialbyte from '../templates/initialbyte.html';
 import sibedge from '../templates/sibedge.html';
 import newsmedia from '../templates/newsmedia.html';
 import kelly from '../templates/kelly.html';
@@ -20,6 +21,7 @@ import stack from '../templates/stack.html';
 import citizenship from '../templates/citizenship.html';
 
 const html = {
+  initialbyte,
   citizenship,
   newsmedia,
   education,

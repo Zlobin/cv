@@ -20,23 +20,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/i,
-        use: [
-          {
-            loader: require.resolve('cache-loader'),
-          },
-          {
-            loader: require.resolve('style-loader'),
-          },
-          {
-            loader: require.resolve('css-loader'),
-          },
-          {
-            loader: require.resolve('sass-loader'),
-          },
-        ],
-      },
-      {
         test: /\.js$/,
         exclude: /\/node_modules/,
         use: [
@@ -54,6 +37,27 @@ module.exports = {
       {
         test: /\.html$/,
         loader: require.resolve('html-loader'),
+      },
+      {
+        test: /\.scss$/i,
+        use: [
+          {
+            loader: require.resolve('cache-loader'),
+          },
+          {
+            loader: require.resolve('style-loader'),
+          },
+          {
+            loader: require.resolve('css-loader'),
+          },
+          {
+            loader: require.resolve('sass-loader'),
+          },
+        ],
+      },
+      {
+        test: /\.(woff|ttf|otf|eot|woff2|svg)$/i,
+        loader: require.resolve('file-loader'),
       },
     ],
   },

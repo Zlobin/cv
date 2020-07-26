@@ -2,7 +2,7 @@ import {ru, en} from '../dictionary/index.js';
 
 const resources = {
   ru,
-  en
+  en,
 };
 
 export const RU = 'ru';
