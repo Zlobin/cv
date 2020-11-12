@@ -24,7 +24,7 @@ export const en = {
   },
   detmir: {
     title: 'Senior fullstack web-developer',
-    description: 'Working in the biggest Russian Bank, Remote Banking with legal entities.',
+    description: 'Working in the largest chain of children\'s goods stores in Russia.',
     achievements: 'Responsibilities and achievements',
     a1: 'Completely reworked application\'s build process, moved to webpack 5 from webpack 4.',
     a2: 'Optimization of the assembly front of the application, it was possible to reduce the number of files by 10 times for node building, reduce the size of css files by 2 times, the size of js files by 10 times for node type of build.',
