@@ -17,6 +17,7 @@ import kelly from '../templates/kelly.html';
 import career from '../templates/career.html';
 import education from '../templates/education.html';
 import about from '../templates/about.html';
+import detmir from '../templates/detmir.html';
 import stack from '../templates/stack.html';
 import citizenship from '../templates/citizenship.html';
 
@@ -28,6 +29,7 @@ const html = {
   contacts,
   sibedge,
   finist,
+  detmir,
   career,
   nitka,
   kelly,

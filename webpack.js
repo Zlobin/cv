@@ -86,7 +86,6 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         exclude: /\/node_modules/,
-        sourceMap: false,
         parallel: true,
       }),
     ],
@@ -121,7 +120,6 @@ module.exports = {
 
     new CompressionPlugin({
       test: /\.js$|\.css$|\.html$/,
-      filename: '[path].gz[query]',
       algorithm: 'gzip',
       threshold: 1024,
       minRatio: 1,
@@ -129,7 +127,7 @@ module.exports = {
 
     new CompressionPlugin({
       test: /\.(js|css|html|svg)$/,
-      filename: '[path].br[query]',
+      filename: '[path][base].br',
       algorithm: 'brotliCompress',
       deleteOriginalAssets: false,
       threshold: 1024,

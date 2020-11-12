@@ -41,7 +41,7 @@ function dateDiff(date1, date2, interval) {
 export const dom = (isLoaded) => {
   const careerFrom = 2008;
   const dateOfBirth = '1988/03/02';
-  const dateOfLastJob = '2019/05/31';
+  const dateOfLastJob = '2020/10/01';
   const today = new Date();
   const byId = document.getElementById.bind(document);
   const alreadyLoaded = true;
@@ -64,7 +64,7 @@ export const dom = (isLoaded) => {
 
   byId('career-experience').innerText = today.getFullYear() - careerFrom;
   byId('age').innerText = Math.floor(dateDiff(dateOfBirth, today, 'months') / 12);
-  byId('job-vtb').innerText = (dateDiff(dateOfLastJob, today, 'months') / 12).toFixed(1);
+  byId('job-detmir').innerText = (dateDiff(dateOfLastJob, today, 'months') / 12).toFixed(1);
 
   // Change language.
   byId('ru').addEventListener('click', () => render(dom, RU, alreadyLoaded));
