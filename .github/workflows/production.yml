@@ -20,7 +20,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Production Build
       run: |
-        npm i -force
+        npm i --force
     - name: Deploy to S3
       uses: jakejarvis/s3-sync-action@master
       with:
