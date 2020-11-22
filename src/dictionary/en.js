@@ -33,6 +33,7 @@ export const en = {
     a5: 'Fix bugs and create new functionality.',
     a6: 'Created a webpack-plugin to generate json file for SSR.',
     a7: 'Implemented smoke-tests for UI part of application.',
+    a8: 'Upgrade react 16 to 17.',
     now: 'till now',
     place: 'Moscow, Russia',
     years: 'years <br>at this job',
