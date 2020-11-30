@@ -34,6 +34,7 @@ export const en = {
     a6: 'Created a webpack-plugin to generate json file for SSR.',
     a7: 'Implemented smoke-tests for UI part of application.',
     a8: 'Upgrade react 16 to 17.',
+    a9: 'Implemented lighthouse CI server auto-check for production build.',
     now: 'till now',
     place: 'Moscow, Russia',
     years: 'years <br>at this job',
