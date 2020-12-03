@@ -35,6 +35,7 @@ export const en = {
     a7: 'Implemented smoke-tests for UI part of application.',
     a8: 'Upgrade react 16 to 17.',
     a9: 'Implemented lighthouse CI server auto-check for production build.',
+    a10: 'Added a/b testing via nginx for proxying analytics.',
     now: 'till now',
     place: 'Moscow, Russia',
     years: 'years <br>at this job',

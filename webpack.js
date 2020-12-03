@@ -12,6 +12,10 @@ const rootPath = process.cwd();
 module.exports = {
   target: 'web',
 
+  cache: {
+    type: 'memory'
+  },
+
   entry: {
     css: join(rootPath, 'src/scss/main.scss'),
     app: join(rootPath, 'src/index.js'),
