@@ -1,24 +1,23 @@
-const CompressionPlugin = require('compression-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
-const {join} = require('path');
-const {port} = require('./package.json');
+const { join } = require("path");
+const { port } = require("./package.json");
 
 const rootPath = process.cwd();
 
 module.exports = {
-  target: 'web',
+  target: "web",
 
   cache: {
-    type: 'memory'
+    type: "memory",
   },
 
   entry: {
-    css: join(rootPath, 'src/scss/main.scss'),
-    app: join(rootPath, 'src/index.js'),
+    css: join(rootPath, "src/scss/main.scss"),
+    app: join(rootPath, "src/index.js"),
   },
 
   module: {
@@ -28,45 +27,42 @@ module.exports = {
         exclude: /\/node_modules/,
         use: [
           {
-            loader: require.resolve('cache-loader'),
-          },
-          {
-            loader: require.resolve('babel-loader'),
+            loader: require.resolve("babel-loader"),
             options: {
               babelrc: false,
+              sourceType: "unambiguous",
+              cacheDirectory: true,
             },
           },
         ],
       },
       {
         test: /\.html$/,
-        loader: require.resolve('html-loader'),
+        loader: require.resolve("html-loader"),
       },
       {
         test: /\.scss$/i,
         use: [
           {
-            loader: require.resolve('cache-loader'),
+            loader: require.resolve("style-loader"),
           },
           {
-            loader: require.resolve('style-loader'),
+            loader: require.resolve("css-loader"),
           },
           {
-            loader: require.resolve('css-loader'),
-          },
-          {
-            loader: require.resolve('sass-loader'),
+            loader: require.resolve("sass-loader"),
           },
         ],
       },
       {
-        test: /\.(woff|ttf|otf|eot|woff2|svg)$/i,
-        loader: require.resolve('file-loader'),
+        test: /\.(woff|ttf|otf|eot|woff2|svg|gif|png|cur|jpg|webp|jpe?g)$/i,
+        exclude: /node_modules/,
+        type: "asset/resource",
       },
     ],
   },
 
-  mode: 'production',
+  mode: "production",
   devtool: false,
   watch: false,
 
@@ -78,10 +74,12 @@ module.exports = {
   },
 
   output: {
-    path: join(rootPath, 'dist'),
-    filename: '[name].[hash:5].js',
-    publicPath: '/',
+    path: join(rootPath, "dist"),
+    filename: "[name].[contenthash:5].js",
+    publicPath: "/",
     pathinfo: false,
+    clean: true,
+    assetModuleFilename: "assets/[contenthash:5][ext][query]",
   },
 
   optimization: {
@@ -100,39 +98,42 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
-
     new CopyPlugin({
       patterns: [
         {
-          from: join(rootPath, 'public/tocopy/'),
-          to: join(rootPath, 'dist/'),
+          from: join(rootPath, "public/tocopy/"),
+          to: join(rootPath, "dist/"),
         },
       ],
     }),
 
     new HtmlWebpackPlugin({
       meta: {
-        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
       },
-      favicon: join(rootPath, 'public/favicon.ico'),
+      favicon: join(rootPath, "public/favicon.ico"),
       minify: {
+        removeStyleLinkTypeAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeRedundantAttributes: true,
+        collapseWhitespace: true,
+        useShortDoctype: true,
         removeComments: false,
       },
-      template: join(rootPath, 'public/index.html'),
+      template: join(rootPath, "public/index.html.ejs"),
     }),
 
     new CompressionPlugin({
       test: /\.js$|\.css$|\.html$/,
-      algorithm: 'gzip',
+      algorithm: "gzip",
       threshold: 1024,
       minRatio: 1,
     }),
 
     new CompressionPlugin({
       test: /\.(js|css|html|svg)$/,
-      filename: '[path][base].br',
-      algorithm: 'brotliCompress',
+      filename: "[path][base].br",
+      algorithm: "brotliCompress",
       deleteOriginalAssets: false,
       threshold: 1024,
       minRatio: 1,

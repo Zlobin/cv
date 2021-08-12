@@ -1,4 +1,4 @@
-const CACHE_NAME = 'app-cache-v1.0.9';
+const CACHE_NAME = 'app-cache-v1.0.10';
 
 self.addEventListener('fetch', (event) => {
   event.respondWith(
